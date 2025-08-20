@@ -54,6 +54,7 @@ int main()
 
 // 핵심: C++11에서 도입된 Uniform Initialization을 사용하면
 //      정수와 실수간의 암묵적인 변환을 허용하지 않습니다.
+#if 0
 int main()
 {
     double d1 = 3.14;
@@ -75,4 +76,24 @@ int main()
 
     double d3 = {3.14};
     int n3 = {(int)d3};
+}
+#endif
+
+// 핵심: C++11에서 도입된 Uniform Initialization을 사용하면
+//      정수와 정수간의 암묵적인 변환도 허용되지 않습니다.
+int main()
+{
+    long n1 = 10000000000000000L;
+    int n2 = n1;
+
+    printf("%d\n", n2);
+
+    if (n1 > INT_MAX || n1 < INT_MIN)
+    {
+        cout << "범위를 벗어납니다." << endl;
+    }
+    else
+    {
+        int n3 = {(int)n1};
+    }
 }
