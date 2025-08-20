@@ -1,0 +1,5 @@
+// video.cpp
+
+void Init()
+{
+}

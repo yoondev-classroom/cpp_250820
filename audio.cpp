@@ -1,0 +1,5 @@
+// audio.cpp
+
+void Init()
+{
+}
