@@ -74,6 +74,9 @@ int main()
 }
 #endif
 
+// C++ 언어의 철학
+// => Zero Overhead
+
 // C++11 - constexpr(상수 표현식에서 사용하는 키워드입니다.)
 int main()
 {
