@@ -29,6 +29,7 @@ int main()
 
     // 허용: C++에서는 실수 타입이 정수 타입으로의 암묵적인 변환이 허용됩니다.
     // cout << gcd(3.14) << endl;
+
     /*
     6_함수7.cpp:31:13: error: call to deleted function 'gcd'
    31 |     cout << gcd(3.14) << endl;
