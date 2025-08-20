@@ -23,6 +23,7 @@ int main()
 }
 #endif
 
+#if 1
 // C++11 - Uniform Initialization
 int main()
 {
@@ -36,6 +37,7 @@ int main()
     int x2[3]{10, 20, 30};
     Point pt2{10, 20};
 }
+#endif
 
 #if 0
 int main()
