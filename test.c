@@ -14,6 +14,7 @@ int main(void)
 }
 #endif
 
+#if 0
 // C의 문제점
 // - const 타입에 초기화를 하지 않을 경우, 컴파일 오류가 발생하지 않습니다.
 int main(void)
@@ -24,4 +25,13 @@ int main(void)
     printf("%d\n", c);
 
     return 0;
+}
+#endif
+
+void foo(int a, int b, int c) {} // _foo
+void goo(int a) {}               // _goo
+void hoo(int a, double b) {}     // _hoo
+
+int main()
+{
 }
