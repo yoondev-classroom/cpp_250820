@@ -48,6 +48,12 @@ public:
     {
         return buff[top - 1];
     }
+
+    // 상수 멤버 함수와 비상수 멤버 함수를 모두 제공하는 것이 C++의 일반적인 스타일입니다.
+    const TYPE &Top() const
+    {
+        return buff[top - 1];
+    }
 };
 
 #include <string>
