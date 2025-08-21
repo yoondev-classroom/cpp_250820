@@ -7,12 +7,12 @@ using namespace std;
 // - while, do-while, for
 // - switch
 
-#if 1
+#if 0
 int main()
 {
     double x[5] = {10.5, 20, 30, 40, 50}; // 컨테이너, 컬렉션
 
-    constexpr int len = sizeof(x) / sizeof(x[0]);
+    constexpr int len = sizeof(x) / sizeof(x[0]); // C++11
     for (int i = 0; i < len; ++i)
     {
         cout << x[i] << endl;
@@ -31,13 +31,15 @@ int main()
 //  - 동적 배열: vector
 //  - 연결 리스트: list
 
-#if 0
+#if 1
 #include <vector>
 #include <list>
+// C++에는 템플릿 기반의 수많은 컨테이너를 제공하고 있습니다.
+// => STL(Standard Template Library)
 
 int main()
 {
-    list<int> v = {10, 20, 30};
+    vector<int> v = {10, 20, 30};
     v.push_back(10);
     v.push_back(10);
     v.push_back(10);
@@ -64,6 +66,7 @@ int Process2()
 }
 
 // C++17, If Statement with Initializer
+// => Swift에서 먼저 도입되었습니다.
 int main()
 {
 
@@ -81,14 +84,16 @@ int main()
 #if 0
 int main()
 {
-    int ret1 = Process1();
-    if (ret1 != 0)
+    int ret = 0;
+
+    ret = Process1();
+    if (ret != 0)
     {
         // ...
     }
 
-    int ret2 = Process2();
-    if (ret2 != 0)
+    ret = Process2();
+    if (ret != 0)
     {
         // ...
     }
