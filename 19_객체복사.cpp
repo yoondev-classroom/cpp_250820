@@ -12,6 +12,7 @@ using namespace std;
 // * 복사 정책
 //   1) 깊은 복사
 //   2) 참조 계수
+//   3) 복사 금지
 
 class User
 {
