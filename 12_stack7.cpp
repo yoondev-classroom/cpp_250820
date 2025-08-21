@@ -27,7 +27,13 @@ public:
         buff = new TYPE[size];
     }
 
-    void Push(TYPE n)
+    // TYPE -> User
+    // => call by value: 템플릿 인자는 객체도 전달받을 수 있기 때문에, const&를 사용해야 합니다.
+
+    // TYPE -> int
+    //  void Push(const int& n)
+    //  : 일반적이지 않지만, 문제는 없습니다.
+    void Push(const TYPE &n)
     {
         buff[top++] = n;
     }
