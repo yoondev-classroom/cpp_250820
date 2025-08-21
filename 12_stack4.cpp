@@ -2,6 +2,13 @@
 #include <iostream>
 using namespace std;
 
+// 객체를 생성하면, 객체를 사용할 수 있는 상태가 되어야 합니다.
+// => 객체가 메모리에 생성되면, 자동으로 호출되는 약속된 멤버 함수가 있습니다.
+//    : 생성자(Constructor) 함수
+
+// * 생성자 멤버 함수
+//  - 클래스 이름과 동일하고 반환 타입을 명시하지 않습니다.
+
 class Stack
 {
     // 멤버 데이터
@@ -9,9 +16,10 @@ class Stack
     int top;
 
 public:
-    // 멤버 함수
-    void Init()
+    // 생성자 => 초기화
+    Stack()
     {
+        cout << "Stack()" << endl;
         top = 0;
     }
 
@@ -26,21 +34,13 @@ public:
     }
 };
 
-// Stack s1;
-
 int main()
 {
     Stack s1;
-    // 상태와 행위를 가지는 변수
-    // => 객체
-
-    s1.Init();
 
     s1.Push(10);
     s1.Push(20);
     s1.Push(30);
-
-    // s1.top = 100; // !!!
 
     cout << s1.Pop() << endl;
     cout << s1.Pop() << endl;
