@@ -2,46 +2,6 @@
 #include <iostream>
 using namespace std;
 
-class Point
-{
-    int x;
-    int y;
-
-public:
-    Point(int a, int b)
-        : x{a}, y{b} {}
-
-    void SetX(int a) { x = a; }
-    void SetY(int a) { y = a; }
-
-    void Print() const
-    {
-        cout << x << ", " << y << endl;
-    }
-};
-
-#if 0
-class Rect
-{
-    Point leftTop;
-
-public:
-    Rect() : leftTop{0, 0} {}
-
-    // Point leftTop() const { return leftTop; }
-    // 불필요한 복사 생성의 비용이 발생합니다.
-
-    // 상수 멤버 함수에서는 멤버를 일반 레퍼런스로 타입으로 반환하는 것이 허용되지 않습니다.
-    const Point &GetLeftTop() const { return leftTop; }
-    Point &GetLeftTop() { return leftTop; }
-
-    // C++에서는 상수 멤버 함수와 비상수 멤버 함수를 모두 제공할 수 있습니다.
-
-    // 핵심: 내부 멤버의 참조/포인터를 반환할 때,
-    //      상수 멤버 함수만 제공하면, const타입으로만 제공해야 합니다.
-    //   => 비상수 멤버 함수도 같이 제공하는 것이 좋습니다.
-};
-
 // * 상수 멤버 함수와 비상수 멤버 함수를 모두 제공한 경우
 //      Point&   -> 비상수 멤버 함수
 // const Point&  -> 상수 멤버 함수
@@ -66,6 +26,46 @@ public:
 //      Point    -> 비상수 멤버 함수
 // const Point   -> X
 
+class Point
+{
+    int x;
+    int y;
+
+public:
+    Point(int a, int b)
+        : x{a}, y{b} {}
+
+    void SetX(int a) { x = a; }
+    void SetY(int a) { y = a; }
+
+    void Print() const
+    {
+        cout << x << ", " << y << endl;
+    }
+};
+
+#if 1
+class Rect
+{
+    Point leftTop;
+
+public:
+    Rect() : leftTop{0, 0} {}
+
+    // Point leftTop() const { return leftTop; }
+    // 불필요한 복사 생성의 비용이 발생합니다.
+
+    // 상수 멤버 함수에서는 멤버를 일반 레퍼런스로 타입으로 반환하는 것이 허용되지 않습니다.
+    const Point &GetLeftTop() const { return leftTop; }
+    Point &GetLeftTop() { return leftTop; }
+
+    // C++에서는 상수 멤버 함수와 비상수 멤버 함수를 모두 제공할 수 있습니다.
+
+    // 핵심: 내부 멤버의 참조/포인터를 반환할 때,
+    //      상수 멤버 함수만 제공하면, const타입으로만 제공해야 합니다.
+    //   => 비상수 멤버 함수도 같이 제공하는 것이 좋습니다.
+};
+
 int main()
 {
     Rect r; // 값을 변경할 수 있는 객체
@@ -79,6 +79,7 @@ int main()
 }
 #endif
 
+#if 0
 class Rect
 {
     Point leftTop;
@@ -109,3 +110,4 @@ int main()
 
     r.Print();
 }
+#endif
