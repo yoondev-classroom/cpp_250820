@@ -12,7 +12,7 @@ class User
 
 public:
     User(const User &rhs) = delete;
-    // 복사 금지!!!
+    // 복사 금지!!! - C++11, Delete Function
 
     User(const char *s, int n)
         : age{n}
