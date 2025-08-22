@@ -39,10 +39,10 @@ int main()
 class Animal
 {
 private:
-    int age2 = 42;
+    int age = 42;
 
 protected:
-    int GetAge() const { return age2; }
+    int GetAge() const { return age; }
 };
 
 class Dog : public Animal
