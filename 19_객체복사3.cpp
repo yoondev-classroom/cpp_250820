@@ -21,6 +21,22 @@ public:
         ++(*ref);
     }
 
+    User &operator=(const User &rhs)
+    {
+        if (--(*ref) == 0)
+        {
+            delete[] name;
+            delete ref;
+        }
+
+        name = rhs.name;
+        age = rhs.age;
+        ref = rhs.ref;
+        ++(*ref);
+
+        return *this;
+    }
+
     User(const char *s, int n)
         : age{n}
     {

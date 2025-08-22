@@ -19,6 +19,23 @@ public:
         name = new char[strlen(rhs.name) + 1];
         strcpy(name, rhs.name);
     }
+
+    User &operator=(const User &rhs)
+    {
+        // 대입 연산자는 이미 소유한 자원이 존재하는 경우,
+        // 정리가 필요합니다.
+        if (name)
+        {
+            delete[] name;
+        }
+
+        name = new char[strlen(rhs.name) + 1];
+        strcpy(name, rhs.name);
+        age = rhs.age;
+
+        return *this;
+    }
+
     //-----
 
     User(const char *s, int n)

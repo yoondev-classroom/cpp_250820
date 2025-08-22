@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace std;
 
+// * 복사 생성자와 대입 연산자는 함께 제공되어야 합니다!!!
+
 // * 복사 정책
 //   3) 복사 금지
 
@@ -12,6 +14,7 @@ class User
 
 public:
     User(const User &rhs) = delete;
+    User &operator=(const User &rhs) = delete;
     // 복사 금지!!! - C++11, Delete Function
 
     User(const char *s, int n)
