@@ -29,7 +29,7 @@ public:
 
 class Person
 {
-    Player *player;
+    Player *player; // 위임: 레퍼런스 / 포인터
 
 public:
     Person(Player *p) : player{p} {}

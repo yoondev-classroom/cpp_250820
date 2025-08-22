@@ -48,7 +48,6 @@ int main()
 // 상속은 목적은 재사용이 아닙니다.
 // 상속의 목적은 "다형성"입니다.
 // 재사용은 "포함"을 통해서 구현하는 것이 좋습니다.
-
 template <typename TYPE>
 class Stack
 {
