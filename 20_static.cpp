@@ -59,7 +59,7 @@ int main()
 
 class Car
 {
-    static int cnt; // 정적 멤버 데이터
+    static int cnt; // 정적 멤버 데이터 선언
 
 public:
     Car() { ++cnt; }
