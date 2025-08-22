@@ -6,6 +6,7 @@ using namespace std;
 // 배열의 전체가 복사되는 것이 아니라, 배열의 첫번째 원소의 주소가 전달됩니다.
 
 // void PrintArray(int x[3])
+//                 int* x ; 컴파일러는 무조건 포인터 형태로 번역합니다.
 #if 0
 void PrintArray(const int *x, int n)
 {

@@ -8,9 +8,12 @@ using namespace std;
 // 3) void*를 구체적인 포인터 타입으로의 변환 => static_cast
 
 // 4) 메모리 재해석 - 다른 포인터 타입을 원하는 포인터 타입으로의 변환 -* 위험!!!
+//  : reinterpret_cast
+
 // 5) const T* -> T*
 //    const T& -> T&
 //     => 타입 불일치 문제를 해결하기 위해서, 명시적인 캐스팅이 필요할 수 있습니다.
+//  : const_cast
 
 // => C++은 용도와 목적에 맞게 캐스팅 연산자를 별도로 제공합니다.
 // 1) static_cast
@@ -50,7 +53,7 @@ int main()
     //----
     int data = 0x12345678;
     // char *pc = (char *)&data;
-    // char *pc = static_cast<char *>(&data);
+    // char *pc = static_cast<char *>(&data); /* 컴파일 오류 */
     char *pc = reinterpret_cast<char *>(&data);
     printf("%x %x %x %x\n", pc[0], pc[1], pc[2], pc[3]);
 

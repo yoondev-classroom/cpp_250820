@@ -40,7 +40,7 @@ public:
 
 int main()
 {
-    // Stack s1;      // Stack s1{};
+    // Stack s1;      // Stack s1{}; -> Stack()
     // Stack s2{100}; // Stack(int)
 
     Stack s1{30};

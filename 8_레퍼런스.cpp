@@ -3,7 +3,8 @@
 
 #include <iostream>
 using namespace std;
-
+//             n
+//   p  ----> [ ]
 #if 0
 int main()
 {
@@ -20,6 +21,9 @@ int main()
 }
 #endif
 
+//  n, rn
+//   [ ]
+
 // 1. C++은 레퍼런스 타입이 도입되었습니다.
 //  레퍼런스: 기존 메모리에 새로운 이름을 부여합니다.
 #if 1
@@ -28,6 +32,7 @@ int main()
     int n = 100;
 
     int &rn = n;
+    // 레퍼런스는 반드시 초기화해야 합니다.
 
     rn = 42;
     cout << rn << endl;

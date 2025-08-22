@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+// MISRA 에서는 malloc/free는 금지되어 있습니다.
 #if 0
 void *malloc(size_t size);
 void free(void *ptr);

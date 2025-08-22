@@ -20,7 +20,7 @@ void SetAddress(User user, std::string address)
 }
 #endif
 
-#if 0
+#if 1
 void SetAddress(User *user, std::string address)
 {
     if (user) // user가 유효한지 체크해야 합니다.

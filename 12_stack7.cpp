@@ -49,6 +49,7 @@ public:
 int main()
 {
     Stack<string> s;
+    // 클래스 템플릿: 명시적인 타입 지정 방식으로 사용해야 합니다.
 
     s.Push("hello");
     s.Push("world");

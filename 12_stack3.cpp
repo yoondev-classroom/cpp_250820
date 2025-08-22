@@ -46,9 +46,10 @@ int main()
 {
     Stack s1;
     // 상태와 행위를 가지는 변수
-    // => 객체
+    // => 객체(Object: Class Instance)
 
     s1.Init();
+    // Stack::Init(&s1)
 
     s1.Push(10);
     s1.Push(20);
