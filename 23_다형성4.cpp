@@ -32,6 +32,8 @@ public:
     virtual void Cry() const { cout << "Dog Cry" << endl; }
 };
 
+// 상속 관계에서 Upcasting을 활용하기 위해서는
+// 반드시 자식이 재정의(Overriding)하는 함수가 가상함수이어야 합니다.
 int main()
 {
     Animal a;
