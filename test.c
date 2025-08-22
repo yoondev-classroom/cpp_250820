@@ -28,10 +28,22 @@ int main(void)
 }
 #endif
 
+#if 0
 void foo(int a, int b, int c) {} // _foo
 void goo(int a) {}               // _goo
 void hoo(int a, double b) {}     // _hoo
 
-int main()
+int main(void)
 {
+}
+#endif
+
+int main(void)
+{
+    int n = 0;
+
+    ++n;
+    // 연산의 결과는 증가된 값
+
+    printf("%d\n", n);
 }

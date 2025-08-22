@@ -64,7 +64,7 @@ int main()
 }
 #endif
 
-#if 0
+#if 1
 int main()
 {
     // C - printf/scanf
@@ -80,6 +80,7 @@ int main()
 }
 #endif
 
+#if 0
 // C++23 - 새로운 출력 함수가 도입되었습니다.
 #include <print>
 // g++ 1_시작2.cpp -std=c++23
@@ -91,3 +92,5 @@ int main()
     std::print("n={}", n);
     std::println("n={}", n);
 }
+
+#endif
