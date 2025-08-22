@@ -38,5 +38,7 @@ int main()
     Point pt3 = {pt1};
     Point pt4{pt1};
 
-    // pt2.Print();
+    pt2.Print();
+    pt3.Print();
+    pt4.Print();
 }

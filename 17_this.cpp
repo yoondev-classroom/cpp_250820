@@ -9,6 +9,7 @@ class Point
     int y = 0;
 
 public:
+    // * thiscall
     // void Set(Point* this, int a, int b)
     void Set(int a, int b)
     {
